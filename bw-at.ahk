@@ -112,7 +112,7 @@ IsLocked := IsLogged := false
 BwStatus := FileOpen("data.json", 0x3).Read()
 BwStatus := BwStatus ? JSON.Load(BwStatus) : {}
 ;          v1.11 to v1.20        ||        v1.21+
-if (StrLen(BwStatus.accessToken) || StrLen(BwStatus.activeUserId))
+if (StrLen(BwStatus.accessToken) || StrLen(BwStatus.global_account_activeAccountId))
 	IsLocked := IsLogged := true
 
 if (IsLocked)
